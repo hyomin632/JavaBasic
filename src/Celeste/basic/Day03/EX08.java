@@ -3,9 +3,9 @@ package Celeste.basic.Day03;
 public class EX08 {
    public static void main(String[] args) {
 	   
-	   System.out.print( " May 13, 1988 fell on day number ");
+	   System.out.print( " Dec 31, 2020 fell on day number ");
 	   
-	   System.out.println( ( (13 + (13 * 3 - 1) / 5 + 1988 % 100 + 1988 % 100 / 4 + 1988 / 400 - 2 * (1988 / 100) ) % 7 + 7) % 7 );
+	   System.out.println( ( (13 + (13 * 3 - 1) / 5 + 2021 % 100 + 2021 % 100 / 4 + 2021 / 400 - 2 * (2021 / 100) ) % 7 + 7) % 7 );
   
 	   System.out.print( " Check out this line  ");
 	   

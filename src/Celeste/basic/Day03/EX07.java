@@ -7,12 +7,13 @@ public class EX07 {
 	   
 	   System.out.println(true || false && 3 < 4 || !(5 == 7));
 	   
-	   boolean result = (3 < 5) & (6 >= 2);
-	   System.out.println("(3 < 5) and (6 >= 2)  + result");
+	   System.out.println(true || (3 < 5 && 6 >= 2));
 	   
-	   // System.out.println(!true > 'A');
+	   // System.out.println(!true > 'A'); // 잘못된 비교 대상으로 오류
 	   
 	   System.out.println(7 % 4 + 3 - 2 / 6 * 'Z');
+	   // 단일 문자를 수식에 사용하면 자동으로 숫자형으로 바뀜 
+	   // 숫자형으로 변환되는 기준은 ASCII 코드값을 참조함 
 	   
 	   System.out.println('D' + 1 + 'M' % 2 / 3);
 	   

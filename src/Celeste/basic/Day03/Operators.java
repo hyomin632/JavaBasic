@@ -49,5 +49,18 @@ public class Operators {
 	   String result2 = x > y ? "x가 큽니다" : "y가 큽니다";
 	   System.out.println(result2);
 	   
+	   // 증감연산자
+	   // 피연산자의 값을 하나 증가시키거나 감소시킴
+	   // 피연산자의 어느 쪽에 위치하는가에 따라 연산의 순서가 달라짐
+	   // i = 1 => i = i + 1 => i += 1 => ++i
+	   //       => i = i + 3 => i += 3
+	   int a = 7, b = 7;
+	   int result3 = ++a + 10; // a값을 증가시킨 후 연산 참여(전치) 
+	   int result4 = b++ + 10; // a값을 연산에 사용한 후 값 증가(후치) 
+	   System.out.println("++a + 10 = " + result3);
+	   System.out.println("b++ + 10 = " + result4);
+	   
+	   
+	   
    }
 }
