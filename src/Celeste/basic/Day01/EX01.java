@@ -9,17 +9,21 @@ public class EX01 {
 	public static void main(String[] args) {
 		// 1.
 
-		System.out.println("*   *    **     ****    ****    *   *      ///// ");
+		System.out.println("*   *    **     ****    ****    *   *     ///// ");
 		System.out.println("*   *   *  *    *   *   *   *   *   *     │O O│ ");
 		System.out.println("*****  *    *   ****    ****     * *     (│ ^ │)");
 		System.out.println("*   *  ******   *   *   *   *     *       │[_]│ ");
-		System.out.println("*   *  *    *   *    *  *    *    *        _____  ");
+		System.out.println("*   *  *    *   *    *  *    *    *       ----- ");
 
-		System.out.println(" +--+              /\\_/\\");
-		System.out.println(" |  |                                    ");
-		System.out.println(" +--+                                    ");
-		System.out.println("                                          ");
-		System.out.println("                                          ");
-		System.out.println("                                          ");
+		
+		System.out.println("             +---+                              ");
+		System.out.println("             |   |                              ");
+		System.out.println("         +---+---+                              ");
+		System.out.println("         |   |   |          /\\_/\\             ");
+		System.out.println("     +---+---+---+         (  ' '  )            ");
+		System.out.println("     |   |   |   |         (   _   )            ");
+		System.out.println(" +---+---+---+---+          |  |  |             ");
+		System.out.println(" |   |   |   |   |         (___|___)            ");
+		System.out.println(" +---+---+---+---+                              ");
 	}
 }
