@@ -1,6 +1,8 @@
-package Celeste.basic.Day09;public class StarCraft2 {
+package Celeste.basic.day10;public class StarCraft2 {
     public static void main(String[] args) {
-        SCV1 s = new SCV1();
+        // 인터페이스 기반으로 스타크래프트의 유닛을 정의
+
+        SCV2 s = new SCV2();
         System.out.println( "SCV의 체력: " + s.hp );
         s.attack();
         s.move();
@@ -32,14 +34,15 @@ abstract class Unit2 {
     protected int gas;
 }
 
+// 인터페이스로 추상 클래스에서 정의했던 추상 메서드를 독립적인 코드로 분리
 interface Unit2Action {
-    abstract public void attack();
+    abstract public void attack(); // abstract public 생략 가능
     abstract public void move();
     abstract public void specialAbility();
 }
 
-class SCV1 extends Unit2 implements Unit2Action {
-    public SCV1() {
+class SCV2 extends Unit2 implements Unit2Action {
+    public SCV2() {
         name = "SCV";
         hp = 50;
         power = 5;
@@ -50,12 +53,11 @@ class SCV1 extends Unit2 implements Unit2Action {
 
     @Override
     public void attack() {
-        System.out.println("융합절단기를 이용해서 대상에 %d의 피해를 주고 있습니다. \n");
-    }
+        System.out.printf("융합절단기를 이용해서 대상에 %d의 피해를 주고 있습니다. \n", power); }
 
     @Override
     public void move() {
-        System.out.println("지정한 위치로 %.2f 속도로 이동 중입니다. \n" + mvspd);
+        System.out.printf("지정한 위치로 %.2f 속도로 이동 중입니다. \n", mvspd);
     }
 
     @Override
@@ -77,17 +79,17 @@ class Marine2 extends Unit2 implements Unit2Action {
 
     @Override
     public void attack() {
-        System.out.println("가우스소총을 이용해서 대상에 %d의 피해를 주고 있습니다.\n" + power);
+        System.out.printf("가우스소총을 이용해서 대상에 %d의 피해를 주고 있습니다.\n", power);
     }
 
     @Override
     public void move() {
-        System.out.println("지정한 위치로 %.2f 속도로 이동 중입니다.\n" + mvspd);
+        System.out.printf("지정한 위치로 %.2f 속도로 이동 중입니다.\n", mvspd);
     }
 
     @Override
     public void specialAbility() {
-        System.out.println("전투자극제를 사용해서 이동 속도는 50%% 증가, 공격 속도는 33%% 증가합니다\n");
+        System.out.println("전투자극제를 사용해서 이동 속도는 50% 증가, 공격 속도는 33% 증가합니다\n");
     }
 }
 
@@ -103,16 +105,16 @@ class Firebat2 extends Unit2 implements Unit2Action {
 
     @Override
     public void attack() {
-        System.out.println("화염방사기를 이용해서 대상에 %d의 피해를 주고 있습니다.\n" + power);
+        System.out.printf("화염방사기를 이용해서 대상에 %d의 피해를 주고 있습니다.\n", power);
     }
 
     @Override
     public void move() {
-        System.out.println("지정한 위치로 %.2f 속도로 이동 중입니다.\n" + mvspd);
+        System.out.printf("지정한 위치로 %.2f 속도로 이동 중입니다.\n", mvspd);
     }
 
     @Override
     public void specialAbility() {
-        System.out.println("전투자극제를 사용해서 이동 속도는 50%% 증가, 공격 속도는 33%% 증가합니다.\n");
+        System.out.println("전투자극제를 사용해서 이동 속도는 50% 증가, 공격 속도는 33% 증가합니다.\n");
     }
 }
