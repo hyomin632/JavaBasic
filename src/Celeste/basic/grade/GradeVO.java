@@ -1,5 +1,7 @@
 package Celeste.basic.grade;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 public class GradeVO {
         protected String name;
         protected int kor;
@@ -70,6 +72,14 @@ public class GradeVO {
 
     public void setGrd(char grd) {
         this.grd = grd;
+    }
+
+    @Override
+    public String toString() {
+        String fmt = "{name: '%s', kor: %d, eng: %d, mat: %d, \n" +
+                     "tot: %d, avg: %.1f, grd: '%s'}";
+        String result = String.format(fmt, name, kor, eng, mat, tot, avg, grd);
+        return result;
     }
 }
 

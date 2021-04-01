@@ -8,7 +8,7 @@ public class GradeServiceImpl implements GradeService {
     public GradeServiceImpl() { }
     public static GradeService getInstance() {
         if (gsrv == null) gsrv = new GradeServiceImpl();
-        return null;
+        return gsrv;
     }
     @Override
     public void displayMenu() {
