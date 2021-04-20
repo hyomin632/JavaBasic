@@ -2,7 +2,10 @@ package Celeste.basic.grade;
 
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
-public class GradeVO {
+import java.io.Serializable;
+
+// 직렬화를 지원하기 위해 Serializable 구현해서 정의해야 함
+public class GradeVO implements Serializable {
         protected String name;
         protected int kor;
         protected int eng;
